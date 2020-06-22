@@ -45,6 +45,15 @@ public class HomeController implements ErrorController {
         
     }
 
+    @RequestMapping("/forgotpassword")
+    public String fp() {
+    	
+        return "forgotpassword";
+        
+    }
+
+   
+    
     @GetMapping("/signup")
     public String signup(Model model) {
     	
@@ -55,6 +64,8 @@ public class HomeController implements ErrorController {
         return "signup";
         
     }
+
+   
 
     @SuppressWarnings("finally")
 	@PostMapping("/signup")
@@ -96,7 +107,10 @@ public class HomeController implements ErrorController {
         }
         
     }
-
+    
+    
+    
+   
     @GetMapping("/userFront")
     public String userFront(Principal principal, Model model) {
     	
